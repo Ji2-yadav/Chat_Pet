@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloudArrowUp } from '@fortawesome/free-solid-svg-icons';
 import './Upload.css'
-
+import config from '../configs/config';
 
 const FileUpload = ({uploadStatus, user_id, new_chat_id, chat_id, setIsLoading}) => {
   const [file, setFile] = useState(null);
@@ -39,7 +39,7 @@ useEffect(() => {
       formData.append('user_id', user_id);
   
       try {
-        const response = await fetch('http://127.0.0.1:5001/api/upload-data', {
+        const response = await fetch(`${config.API_ENDPOINT}/api/upload-data`, {
           method: 'POST',
           body: formData,
           onUploadProgress: (progressEvent) => {

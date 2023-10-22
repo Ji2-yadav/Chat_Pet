@@ -6,6 +6,7 @@ import logo from '../images/Crux.png'
 import user from '../images/user.png'
 import Graph from './Graph';
 import FileUpload from './FileUpload';
+import config from '../configs/config';
 
 function Chat({curr_user_id, selectedChatID}) {
     const [messages, setMessages] = useState([]);
@@ -53,7 +54,7 @@ function Chat({curr_user_id, selectedChatID}) {
     const load_msg_api = async (user_id, chat_id) => {
         setIsLoading(true);
         try {
-            const response = await fetch('http://127.0.0.1:5001/api/load-messages', {
+            const response = await fetch(`${config.API_ENDPOINT}/api/load-messages`, {
             method: 'POST',
             body: JSON.stringify({
                  user_id: user_id,
@@ -121,7 +122,7 @@ function Chat({curr_user_id, selectedChatID}) {
         setIsLoading(true); // Set loading to true when the API call starts.
     
         try {
-          const response = await fetch('http://127.0.0.1:5001/api/user-question', {
+          const response = await fetch(`${config.API_ENDPOINT}/api/user-question`, {
             method: 'POST',
             body: JSON.stringify({
               message: input,
@@ -152,7 +153,7 @@ function Chat({curr_user_id, selectedChatID}) {
     const trigger_chat_initiation = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch('http://127.0.0.1:5001/api/chat-initiation', {
+            const response = await fetch(`${config.API_ENDPOINT}/api/chat-initiation`, {
             method: 'POST',
             body: JSON.stringify({
                 user_id: user_id,
@@ -264,7 +265,7 @@ function animateScroll(duration) {
     setIsLoading(true);
     try {
         
-        const response = await fetch('http://127.0.0.1:5001/api/edit-message', {
+        const response = await fetch(`${config.API_ENDPOINT}/api/edit-message`, {
         method: 'POST',
         body: JSON.stringify({
             user_id: user_id,

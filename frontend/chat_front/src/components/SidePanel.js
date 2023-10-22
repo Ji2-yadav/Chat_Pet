@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faL, faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 import "./SidePanel.css";
 import logo from '../images/Crux.png'
+import config from "../configs/config";
 const SidePanel = ({ user_id, on_select_chat }) => {
     const [chats, setChats] = useState([]);
     const [selectChat, setSelectChat] = useState(null)
@@ -43,7 +44,7 @@ const SidePanel = ({ user_id, on_select_chat }) => {
     const load_chat_api = async (user_id) => {
         try {
             const response = await fetch(
-                "http://127.0.0.1:5001/api/load-chats",
+                `${config.API_ENDPOINT}/api/load-chats`,
                 {
                     method: "POST",
                     body: JSON.stringify({
@@ -70,7 +71,7 @@ const SidePanel = ({ user_id, on_select_chat }) => {
     const delete_chat_api = async (chat_id) => {
         try {
             const response = await fetch(
-                "http://127.0.0.1:5001/api/delete-chat",
+                `${config.API_ENDPOINT}/api/delete-chat`,
                 {
                     method: "POST",
                     body: JSON.stringify({

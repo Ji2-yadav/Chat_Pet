@@ -4,7 +4,7 @@ const useProjectionData = ({user_id, chat_id}) => {
 
   const load_msg_api = async (user_id, chat_id) => {
     try {
-            const response = await fetch('http://127.0.0.1:5001/api/load-messages', {
+            const response = await fetch('${config.API_ENDPOINT}/api/load-messages', {
             method: 'POST',
             body: JSON.stringify({
                 user_id: user_id,
