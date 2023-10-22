@@ -1,0 +1,41 @@
+.graph-container {
+    position: relative;
+  }
+  
+.chart-buttons {
+    position: relative;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    text-align: right;
+}
+.chart-icons{
+    margin: 2% 0;
+    margin-top:4% ;
+    padding: 1% 2%;
+    border: 1px solid grey;
+    
+
+}
+.chart-icons:first-child{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.chart-icons:last-child{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.active{
+    background-color: rgb(53, 53, 53);
+    color: white;
+}
+
+.chart-area{
+    height: 50vh;
+    /* width: 60vh; */
+}
+.pie{
+    margin: 0 auto;
+    /* background-color: aqua; */
+}
