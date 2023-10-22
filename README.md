@@ -1,4 +1,4 @@
-# Chat_Pet - A Powerful tool for all your data chat needs
+# Chat_Pet - A Powerful tool for all your data needs
 ## Overview
 
 ## Table of Contents
