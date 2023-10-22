@@ -1,5 +1,5 @@
 import React, { useState, useEffect , useRef} from 'react';
-import './Chat.css';
+import '../css/Chat.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleRight, faCheck, faCheckSquare, faEdit, faPen } from '@fortawesome/free-solid-svg-icons';
 import logo from '../images/Crux.png'

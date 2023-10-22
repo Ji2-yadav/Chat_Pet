@@ -9,7 +9,7 @@ import {
   LinearScale,
   LineElement,
 } from 'chart.js';
-import './Graph.css'
+import '../css/Graph.css'
 
 import { Line } from 'react-chartjs-2';
 

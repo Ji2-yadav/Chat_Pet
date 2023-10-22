@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faL, faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
-import "./SidePanel.css";
+import "../css/SidePanel.css";
 import logo from '../images/Crux.png'
 import config from "../configs/config";
 const SidePanel = ({ user_id, on_select_chat }) => {

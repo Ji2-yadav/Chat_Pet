@@ -8,7 +8,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
-import './Graph.css'
+import '../css/Graph.css'
 
 import { Bar } from 'react-chartjs-2';
 

@@ -4,7 +4,7 @@ import BarChart from './Bar';
 import HeatmapChart from './HeatMap';
 import LineChart from './Line';
 import PieChart from './Pie';
-import './Graph.css';
+import '../css/Graph.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleRight, faBarChart, faChartArea, faChartColumn, faChartSimple, faChartGantt, faChartLine, faChartPie, faCheck, faCheckSquare, faEdit, faFire, faHandsBubbles, faPen
 } from '@fortawesome/free-solid-svg-icons';

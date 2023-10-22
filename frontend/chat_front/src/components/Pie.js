@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement } from 'chart.js';
-import './Graph.css'
+import '../css/Graph.css'
 
 
 ChartJS.register(Title, Tooltip, Legend, ArcElement);
